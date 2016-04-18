@@ -358,6 +358,16 @@ void p_inv(CUBE *cube)
   cube->cubelet[0][1][2].face[4] = sav2;
 }
 
+void h_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->h_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->h_angle=0;
+  h(cube);
+}
 
 void h(CUBE *cube)
 {
@@ -407,6 +417,27 @@ void h_inv(CUBE *cube)
   h(cube);
 }
 
+void h_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->h_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->h_angle=0;
+  h(cube);
+}
+
+void b_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->b_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->b_angle=0;
+  b(cube);
+}
 
 void b(CUBE *cube)
 {
@@ -454,6 +485,17 @@ void b_inv(CUBE *cube)
 
   cube->cubelet[0][0][1].face[3] = sav1;
   cube->cubelet[0][0][1].face[4] = sav2;
+}
+
+void b_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->b_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->b_angle=0;
+  b(cube);
 }
 
 void d_anim(CUBE * cube)
@@ -527,6 +569,17 @@ void d_inv_anim(CUBE * cube)
 }
 
 
+void g_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->g_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->g_angle=0;
+  g(cube);
+}
+
 void g(CUBE *cube)
 {
   g_inv(cube);
@@ -573,6 +626,17 @@ void g_inv(CUBE *cube)
 
   cube->cubelet[0][1][0].face[4] = sav1;
   cube->cubelet[0][1][0].face[0] = sav2;
+}
+
+void g_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->g_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->g_angle=0;
+  g(cube);
 }
 
 

@@ -48,7 +48,10 @@ struct CUBE
   CUBELET cubelet[3][3][3];
   double a_angle;
   double p_angle;
+  double g_angle;
   double d_angle;
+  double b_angle;
+  double h_angle;
 } typedef CUBE;
 
 

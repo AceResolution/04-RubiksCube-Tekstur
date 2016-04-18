@@ -137,42 +137,42 @@ void Exec( CUBE *cube, char *command )
         {
         case '-':
         case '\'':
-          g_inv(cube);
+          g_inv_anim(cube);
           break;
         case '2':
         case 'ý'://²
         case '²':
-          g(cube);
+          g_anim(cube);
         case 0:
-          g(cube);
+          g_anim(cube);
         }
       break;
     case 'h':
       switch(buf[1]) {
       case '-':
       case '\'':
-        h_inv(cube);
+        h_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        h(cube);
+        h_anim(cube);
       case 0:
-        h(cube);
+        h_anim(cube);
       }
       break;
     case 'b':
       switch(buf[1]) {
       case '-':
       case '\'':
-        b_inv(cube);
+        b_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        b(cube);
+        b_anim(cube);
       case 0:
-        b(cube);
+        b_anim(cube);
       }
     case '.':
     case ' ':
