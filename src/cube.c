@@ -151,14 +151,14 @@ void Exec( CUBE *cube, char *command )
       switch(buf[1]) {
       case '-':
       case '\'':
-        h_inv(cube);
+        h_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        h(cube);
+        h_anim(cube);
       case 0:
-        h(cube);
+        h_anim(cube);
       }
       break;
     case 'b':

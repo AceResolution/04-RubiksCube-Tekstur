@@ -358,6 +358,18 @@ void p_inv(CUBE *cube)
 }
 
 
+void h_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->h_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->h_angle=0;
+  h(cube);
+}
+
+
 void h(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
@@ -398,6 +410,17 @@ void h(CUBE *cube)
   cube->cubelet[0][2][1].face[4] = sav2;
 }
 
+
+void h_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->h_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->h_angle=0;
+  h(cube);
+}
 
 void h_inv(CUBE *cube)
 {
