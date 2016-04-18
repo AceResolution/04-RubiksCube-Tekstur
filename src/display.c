@@ -1,4 +1,4 @@
-/* display.c : Fonctions d'affichage du cube 
+/* display.c : Fonctions d'affichage du cube
  *             displaying functions (using OpenGL)
  *
  */
@@ -75,7 +75,7 @@ void drawcubelet( CUBELET *cubelet )
   glVertex3i(-1,1,1);
   glVertex3i(1,1,1);
   glVertex3i(1,1,-1);
-  //face 2 
+  //face 2
   setColor(cubelet->face[2]);
   glVertex3i(1,1,1);
   glVertex3i(1,-1,1);
@@ -107,19 +107,19 @@ void draw(void)
 {
   //	a+=2;
   //	b+=1.6;
-  
+
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  
+
   glTranslated(0,0,zoom);// Equivaut exactement à gluLookAt(0,0,5,0,0,0,0,1,0);
   glRotated(rx,1,0,0);
   glRotated(ry,0,1,0);
   glRotated(rz,0,0,1);
-  
+
   glColorMaterial(GL_FRONT_AND_BACK,GL_SPECULAR);
   //Ca marche aussi avec specular !
-  
+
   glTranslated(-2.5,-2.5,-2.5);
   drawcubelet(&(pcube->cubelet[0][0][2]));
   glTranslated(2.5,0,0);
@@ -174,7 +174,7 @@ void draw(void)
   drawcubelet(&(pcube->cubelet[1][2][0]));
   glTranslated(2.5,0,0);
   drawcubelet(&(pcube->cubelet[2][2][0]));
-	
+
   glutSwapBuffers();
   glutPostRedisplay();
 }
@@ -197,9 +197,11 @@ void reshape(int width, int height)
 }
 
 
-void GestionClavier(unsigned char key, int x, int y)  
+void GestionClavier(unsigned char key, int x, int y)
 {
   switch(key) {
+  case 'a': a(pcube); return;
+  case 'A': a_inv(pcube); return;
   case '2':
     rx--;
     return;
@@ -232,7 +234,7 @@ void GestionClavier(unsigned char key, int x, int y)
   case 27:
     exit(0);
   }
-} 
+}
 
 
 void initdisplay( int argc, char *argv[] )
@@ -240,14 +242,14 @@ void initdisplay( int argc, char *argv[] )
   glutInit(&argc,argv);
   glutInitWindowSize(320,240);
   glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
-  
+
   Window = glutCreateWindow("Rubik's Cube");
-  
+
   InitGL();
   glutReshapeFunc(reshape);
   glutDisplayFunc(draw);
   glutKeyboardFunc(GestionClavier);
-  
+
   glutMainLoop();
 }
 
