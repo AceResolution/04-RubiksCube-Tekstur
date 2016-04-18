@@ -127,23 +127,73 @@ void draw(void)
   //Ca marche aussi avec specular !
   
   glTranslated(-2.5,-2.5,-2.5);
+
+  rotateAroundAxisd(2.5,2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[0][0][2]));
+  rotateAroundAxisd(2.5,2.5,0,
+		pcube->p_angle,0,0,1);
   glTranslated(2.5,0,0);
+  rotateAroundAxisd(0,2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[1][0][2]));
+  rotateAroundAxisd(0,2.5,0,
+		pcube->p_angle,0,0,1);
   glTranslated(2.5,0,0);
+
+  rotateAroundAxisd(-2.5,2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[2][0][2]));
+  rotateAroundAxisd(-2.5,2.5,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(0,2.5,0);
+
+  rotateAroundAxisd(-2.5,0,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[2][1][2]));
+  rotateAroundAxisd(-2.5,0,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(-2.5,0,0);
+
+  rotateAroundAxisd(0,0,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[1][1][2]));
+  rotateAroundAxisd(0,0,0,
+		pcube->p_angle,0,0,1);
   glTranslated(-2.5,0,0);
+
+  rotateAroundAxisd(2.5,0,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[0][1][2]));
+  rotateAroundAxisd(2.5,0,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(0,2.5,0);
+
+  rotateAroundAxisd(2.5,-2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[0][2][2]));
+  rotateAroundAxisd(2.5,-2.5,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(2.5,0,0);
+
+  rotateAroundAxisd(0,-2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[1][2][2]));
+  rotateAroundAxisd(0,-2.5,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(2.5,0,0);
+
+  rotateAroundAxisd(-2.5,-2.5,0,
+		-pcube->p_angle,0,0,1);
   drawcubelet(&(pcube->cubelet[2][2][2]));
+  rotateAroundAxisd(-2.5,-2.5,0,
+		pcube->p_angle,0,0,1);
+
   glTranslated(0,0,2.5);
   drawcubelet(&(pcube->cubelet[2][2][1]));
   glTranslated(-2.5,0,0);

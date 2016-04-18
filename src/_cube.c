@@ -213,6 +213,7 @@ void Reset( CUBE *cube )
   cube->cubelet[2][2][2].face[5] = Y;
 
   cube->a_angle = 0;
+  cube->p_angle = 0;
 }
 
 #define anim_delay 10000
@@ -286,6 +287,16 @@ void a_inv(CUBE *cube)
   a(cube);
 }
 
+void p_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->p_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->p_angle=0;
+  p(cube);
+}
 
 void p(CUBE *cube)
 {
@@ -294,6 +305,17 @@ void p(CUBE *cube)
   p_inv(cube);
 }
 
+
+void p_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->p_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->p_angle=0;
+  p(cube);
+}
 
 void p_inv(CUBE *cube)
 {
