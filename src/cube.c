@@ -1,6 +1,6 @@
 /* cube.c : fonctions evoluees pour le cube (Scramble et Exec)
  *          advanced cube functions (Scramble and Exec)
- *
+ * modif oleh AceOneWorks (Nizam, EC, Elfansoer)
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
  * Rubik's Cube Simulator !                 Copyright (C) 2002, AnTiKoNs *

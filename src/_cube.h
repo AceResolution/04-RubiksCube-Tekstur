@@ -1,6 +1,6 @@
 /* _cube.h : structures pour gerer le cube en memoire
  *           cube structures
- *
+ * modif oleh AceOneWorks (Nizam, EC, Elfansoer)
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
  * Rubik's Cube Simulator !                 Copyright (C) 2002, AnTiKoNs *

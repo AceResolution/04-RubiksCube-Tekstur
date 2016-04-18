@@ -1,6 +1,6 @@
 /* interpretor.c : l'interpreteur de commandes 
  *                 commands interpretor
- *
+ * modif oleh AceOneWorks (Nizam, EC, Elfansoer)
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
  * Rubik's Cube Simulator !                 Copyright (C) 2002, AnTiKoNs *

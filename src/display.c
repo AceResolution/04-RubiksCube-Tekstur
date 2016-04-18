@@ -1,5 +1,6 @@
 /* display.c : Fonctions d'affichage du cube
  *             displaying functions (using OpenGL)
+	modif oleh AceOneWorks (Nizam, EC, Elfansoer)
  *
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
