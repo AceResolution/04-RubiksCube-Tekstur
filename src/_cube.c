@@ -1,4 +1,4 @@
-/* _cube.c : Les fonctions de base du cube (Reset,a,p,g,d,h,b et inverses) 
+/* _cube.c : Les fonctions de base du cube (Reset,a,p,g,d,h,b et inverses)
  *           Base cube functions
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
@@ -29,182 +29,182 @@ void Reset( CUBE *cube )
   cube->cubelet[0][0][0].face[3] = G;
   cube->cubelet[0][0][0].face[4] = O;
   cube->cubelet[0][0][0].face[5] = N;
-	
+
   cube->cubelet[1][0][0].face[0] = W;
   cube->cubelet[1][0][0].face[1] = N;
   cube->cubelet[1][0][0].face[2] = N;
   cube->cubelet[1][0][0].face[3] = G;
   cube->cubelet[1][0][0].face[4] = N;
   cube->cubelet[1][0][0].face[5] = N;
-	
+
   cube->cubelet[2][0][0].face[0] = W;
   cube->cubelet[2][0][0].face[1] = N;
   cube->cubelet[2][0][0].face[2] = R;
   cube->cubelet[2][0][0].face[3] = G;
   cube->cubelet[2][0][0].face[4] = N;
   cube->cubelet[2][0][0].face[5] = N;
-	
+
   cube->cubelet[0][1][0].face[0] = W;
   cube->cubelet[0][1][0].face[1] = N;
   cube->cubelet[0][1][0].face[2] = N;
   cube->cubelet[0][1][0].face[3] = N;
   cube->cubelet[0][1][0].face[4] = O;
   cube->cubelet[0][1][0].face[5] = N;
-	
+
   cube->cubelet[1][1][0].face[0] = W;
   cube->cubelet[1][1][0].face[1] = N;
   cube->cubelet[1][1][0].face[2] = N;
   cube->cubelet[1][1][0].face[3] = N;
   cube->cubelet[1][1][0].face[4] = N;
   cube->cubelet[1][1][0].face[5] = N;
-	
+
   cube->cubelet[2][1][0].face[0] = W;
   cube->cubelet[2][1][0].face[1] = N;
   cube->cubelet[2][1][0].face[2] = R;
   cube->cubelet[2][1][0].face[3] = N;
   cube->cubelet[2][1][0].face[4] = N;
   cube->cubelet[2][1][0].face[5] = N;
-	
+
   cube->cubelet[0][2][0].face[0] = W;
   cube->cubelet[0][2][0].face[1] = B;
   cube->cubelet[0][2][0].face[2] = N;
   cube->cubelet[0][2][0].face[3] = N;
   cube->cubelet[0][2][0].face[4] = O;
   cube->cubelet[0][2][0].face[5] = N;
-	
+
   cube->cubelet[1][2][0].face[0] = W;
   cube->cubelet[1][2][0].face[1] = B;
   cube->cubelet[1][2][0].face[2] = N;
   cube->cubelet[1][2][0].face[3] = N;
   cube->cubelet[1][2][0].face[4] = N;
   cube->cubelet[1][2][0].face[5] = N;
-	
+
   cube->cubelet[2][2][0].face[0] = W;
   cube->cubelet[2][2][0].face[1] = B;
   cube->cubelet[2][2][0].face[2] = R;
   cube->cubelet[2][2][0].face[3] = N;
   cube->cubelet[2][2][0].face[4] = N;
   cube->cubelet[2][2][0].face[5] = N;
-	
+
   cube->cubelet[0][0][1].face[0] = N;
   cube->cubelet[0][0][1].face[1] = N;
   cube->cubelet[0][0][1].face[2] = N;
   cube->cubelet[0][0][1].face[3] = G;
   cube->cubelet[0][0][1].face[4] = O;
   cube->cubelet[0][0][1].face[5] = N;
-	
+
   cube->cubelet[1][0][1].face[0] = N;
   cube->cubelet[1][0][1].face[1] = N;
   cube->cubelet[1][0][1].face[2] = N;
   cube->cubelet[1][0][1].face[3] = G;
   cube->cubelet[1][0][1].face[4] = N;
   cube->cubelet[1][0][1].face[5] = N;
-	
+
   cube->cubelet[2][0][1].face[0] = N;
   cube->cubelet[2][0][1].face[1] = N;
   cube->cubelet[2][0][1].face[2] = R;
   cube->cubelet[2][0][1].face[3] = G;
   cube->cubelet[2][0][1].face[4] = N;
   cube->cubelet[2][0][1].face[5] = N;
-	
+
   cube->cubelet[0][1][1].face[0] = N;
   cube->cubelet[0][1][1].face[1] = N;
   cube->cubelet[0][1][1].face[2] = N;
   cube->cubelet[0][1][1].face[3] = N;
   cube->cubelet[0][1][1].face[4] = O;
   cube->cubelet[0][1][1].face[5] = N;
-	
+
   cube->cubelet[1][1][1].face[0] = N;
   cube->cubelet[1][1][1].face[1] = N;
   cube->cubelet[1][1][1].face[2] = N;
   cube->cubelet[1][1][1].face[3] = N;
   cube->cubelet[1][1][1].face[4] = N;
   cube->cubelet[1][1][1].face[5] = N;
-	
+
   cube->cubelet[2][1][1].face[0] = N;
   cube->cubelet[2][1][1].face[1] = N;
   cube->cubelet[2][1][1].face[2] = R;
   cube->cubelet[2][1][1].face[3] = N;
   cube->cubelet[2][1][1].face[4] = N;
   cube->cubelet[2][1][1].face[5] = N;
-	
+
   cube->cubelet[0][2][1].face[0] = N;
   cube->cubelet[0][2][1].face[1] = B;
   cube->cubelet[0][2][1].face[2] = N;
   cube->cubelet[0][2][1].face[3] = N;
   cube->cubelet[0][2][1].face[4] = O;
   cube->cubelet[0][2][1].face[5] = N;
-	
+
   cube->cubelet[1][2][1].face[0] = N;
   cube->cubelet[1][2][1].face[1] = B;
   cube->cubelet[1][2][1].face[2] = N;
   cube->cubelet[1][2][1].face[3] = N;
   cube->cubelet[1][2][1].face[4] = N;
   cube->cubelet[1][2][1].face[5] = N;
-	
+
   cube->cubelet[2][2][1].face[0] = N;
   cube->cubelet[2][2][1].face[1] = B;
   cube->cubelet[2][2][1].face[2] = R;
   cube->cubelet[2][2][1].face[3] = N;
   cube->cubelet[2][2][1].face[4] = N;
   cube->cubelet[2][2][1].face[5] = N;
-	
+
   cube->cubelet[0][0][2].face[0] = N;
   cube->cubelet[0][0][2].face[1] = N;
   cube->cubelet[0][0][2].face[2] = N;
   cube->cubelet[0][0][2].face[3] = G;
   cube->cubelet[0][0][2].face[4] = O;
   cube->cubelet[0][0][2].face[5] = Y;
-	
+
   cube->cubelet[1][0][2].face[0] = N;
   cube->cubelet[1][0][2].face[1] = N;
   cube->cubelet[1][0][2].face[2] = N;
   cube->cubelet[1][0][2].face[3] = G;
   cube->cubelet[1][0][2].face[4] = N;
   cube->cubelet[1][0][2].face[5] = Y;
-	
+
   cube->cubelet[2][0][2].face[0] = N;
   cube->cubelet[2][0][2].face[1] = N;
   cube->cubelet[2][0][2].face[2] = R;
   cube->cubelet[2][0][2].face[3] = G;
   cube->cubelet[2][0][2].face[4] = N;
   cube->cubelet[2][0][2].face[5] = Y;
-	
+
   cube->cubelet[0][1][2].face[0] = N;
   cube->cubelet[0][1][2].face[1] = N;
   cube->cubelet[0][1][2].face[2] = N;
   cube->cubelet[0][1][2].face[3] = N;
   cube->cubelet[0][1][2].face[4] = O;
   cube->cubelet[0][1][2].face[5] = Y;
-	
+
   cube->cubelet[1][1][2].face[0] = N;
   cube->cubelet[1][1][2].face[1] = N;
   cube->cubelet[1][1][2].face[2] = N;
   cube->cubelet[1][1][2].face[3] = N;
   cube->cubelet[1][1][2].face[4] = N;
   cube->cubelet[1][1][2].face[5] = Y;
-	
+
   cube->cubelet[2][1][2].face[0] = N;
   cube->cubelet[2][1][2].face[1] = N;
   cube->cubelet[2][1][2].face[2] = R;
   cube->cubelet[2][1][2].face[3] = N;
   cube->cubelet[2][1][2].face[4] = N;
   cube->cubelet[2][1][2].face[5] = Y;
-	
+
   cube->cubelet[0][2][2].face[0] = N;
   cube->cubelet[0][2][2].face[1] = B;
   cube->cubelet[0][2][2].face[2] = N;
   cube->cubelet[0][2][2].face[3] = N;
   cube->cubelet[0][2][2].face[4] = O;
   cube->cubelet[0][2][2].face[5] = Y;
-	
+
   cube->cubelet[1][2][2].face[0] = N;
   cube->cubelet[1][2][2].face[1] = B;
   cube->cubelet[1][2][2].face[2] = N;
   cube->cubelet[1][2][2].face[3] = N;
   cube->cubelet[1][2][2].face[4] = N;
   cube->cubelet[1][2][2].face[5] = Y;
-	
+
   cube->cubelet[2][2][2].face[0] = N;
   cube->cubelet[2][2][2].face[1] = B;
   cube->cubelet[2][2][2].face[2] = R;
@@ -214,6 +214,7 @@ void Reset( CUBE *cube )
 
   cube->a_angle = 0;
   cube->p_angle = 0;
+  cube->d_angle = 0;
 }
 
 #define anim_delay 10000
@@ -232,39 +233,39 @@ void a_anim(CUBE * cube)
 void a(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[0][0][0].face[0];
   sav2 = cube->cubelet[0][0][0].face[4];
   sav3 = cube->cubelet[0][0][0].face[3];
-	
+
   cube->cubelet[0][0][0].face[0] = cube->cubelet[2][0][0].face[0];
   cube->cubelet[0][0][0].face[4] = cube->cubelet[2][0][0].face[3];
   cube->cubelet[0][0][0].face[3] = cube->cubelet[2][0][0].face[2];
-	
+
   cube->cubelet[2][0][0].face[0] = cube->cubelet[2][2][0].face[0];
   cube->cubelet[2][0][0].face[2] = cube->cubelet[2][2][0].face[1];
   cube->cubelet[2][0][0].face[3] = cube->cubelet[2][2][0].face[2];
-	
+
   cube->cubelet[2][2][0].face[0] = cube->cubelet[0][2][0].face[0];
   cube->cubelet[2][2][0].face[2] = cube->cubelet[0][2][0].face[1];
   cube->cubelet[2][2][0].face[1] = cube->cubelet[0][2][0].face[4];
-	
+
   cube->cubelet[0][2][0].face[0] = sav1;
   cube->cubelet[0][2][0].face[1] = sav2;
   cube->cubelet[0][2][0].face[4] = sav3;
-	
+
   sav1 = cube->cubelet[1][0][0].face[0];
   sav2 = cube->cubelet[1][0][0].face[3];
-	
+
   cube->cubelet[1][0][0].face[0] = cube->cubelet[2][1][0].face[0];
   cube->cubelet[1][0][0].face[3] = cube->cubelet[2][1][0].face[2];
-	
+
   cube->cubelet[2][1][0].face[0] = cube->cubelet[1][2][0].face[0];
   cube->cubelet[2][1][0].face[2] = cube->cubelet[1][2][0].face[1];
-	
+
   cube->cubelet[1][2][0].face[0] = cube->cubelet[0][1][0].face[0];
   cube->cubelet[1][2][0].face[1] = cube->cubelet[0][1][0].face[4];
-	
+
   cube->cubelet[0][1][0].face[0] = sav1;
   cube->cubelet[0][1][0].face[4] = sav2;
 }
@@ -320,39 +321,39 @@ void p_inv_anim(CUBE * cube)
 void p_inv(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[0][0][2].face[5];
   sav2 = cube->cubelet[0][0][2].face[4];
   sav3 = cube->cubelet[0][0][2].face[3];
-	
+
   cube->cubelet[0][0][2].face[5] = cube->cubelet[2][0][2].face[5];
   cube->cubelet[0][0][2].face[4] = cube->cubelet[2][0][2].face[3];
   cube->cubelet[0][0][2].face[3] = cube->cubelet[2][0][2].face[2];
-	
+
   cube->cubelet[2][0][2].face[5] = cube->cubelet[2][2][2].face[5];
   cube->cubelet[2][0][2].face[2] = cube->cubelet[2][2][2].face[1];
   cube->cubelet[2][0][2].face[3] = cube->cubelet[2][2][2].face[2];
-	
+
   cube->cubelet[2][2][2].face[5] = cube->cubelet[0][2][2].face[5];
   cube->cubelet[2][2][2].face[2] = cube->cubelet[0][2][2].face[1];
   cube->cubelet[2][2][2].face[1] = cube->cubelet[0][2][2].face[4];
-	
+
   cube->cubelet[0][2][2].face[5] = sav1;
   cube->cubelet[0][2][2].face[1] = sav2;
   cube->cubelet[0][2][2].face[4] = sav3;
-	
+
   sav1 = cube->cubelet[1][0][2].face[5];
   sav2 = cube->cubelet[1][0][2].face[3];
-	
+
   cube->cubelet[1][0][2].face[5] = cube->cubelet[2][1][2].face[5];
   cube->cubelet[1][0][2].face[3] = cube->cubelet[2][1][2].face[2];
-	
+
   cube->cubelet[2][1][2].face[5] = cube->cubelet[1][2][2].face[5];
   cube->cubelet[2][1][2].face[2] = cube->cubelet[1][2][2].face[1];
-	
+
   cube->cubelet[1][2][2].face[5] = cube->cubelet[0][1][2].face[5];
   cube->cubelet[1][2][2].face[1] = cube->cubelet[0][1][2].face[4];
-	
+
   cube->cubelet[0][1][2].face[5] = sav1;
   cube->cubelet[0][1][2].face[4] = sav2;
 }
@@ -361,39 +362,39 @@ void p_inv(CUBE *cube)
 void h(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[0][2][0].face[1];
   sav2 = cube->cubelet[0][2][0].face[0];
   sav3 = cube->cubelet[0][2][0].face[4];
-	
+
   cube->cubelet[0][2][0].face[1] = cube->cubelet[2][2][0].face[1];
   cube->cubelet[0][2][0].face[0] = cube->cubelet[2][2][0].face[2];
   cube->cubelet[0][2][0].face[4] = cube->cubelet[2][2][0].face[0];
-	
+
   cube->cubelet[2][2][0].face[1] = cube->cubelet[2][2][2].face[1];
   cube->cubelet[2][2][0].face[2] = cube->cubelet[2][2][2].face[5];
   cube->cubelet[2][2][0].face[0] = cube->cubelet[2][2][2].face[2];
-	
+
   cube->cubelet[2][2][2].face[1] = cube->cubelet[0][2][2].face[1];
   cube->cubelet[2][2][2].face[5] = cube->cubelet[0][2][2].face[4];
   cube->cubelet[2][2][2].face[2] = cube->cubelet[0][2][2].face[5];
-	
+
   cube->cubelet[0][2][2].face[1] = sav1;
   cube->cubelet[0][2][2].face[4] = sav2;
   cube->cubelet[0][2][2].face[5] = sav3;
-	
+
   sav1 = cube->cubelet[1][2][0].face[1];
   sav2 = cube->cubelet[1][2][0].face[0];
-	
+
   cube->cubelet[1][2][0].face[1] = cube->cubelet[2][2][1].face[1];
   cube->cubelet[1][2][0].face[0] = cube->cubelet[2][2][1].face[2];
-	
+
   cube->cubelet[2][2][1].face[1] = cube->cubelet[1][2][2].face[1];
   cube->cubelet[2][2][1].face[2] = cube->cubelet[1][2][2].face[5];
-	
+
   cube->cubelet[1][2][2].face[1] = cube->cubelet[0][2][1].face[1];
   cube->cubelet[1][2][2].face[5] = cube->cubelet[0][2][1].face[4];
-	
+
   cube->cubelet[0][2][1].face[1] = sav1;
   cube->cubelet[0][2][1].face[4] = sav2;
 }
@@ -418,80 +419,90 @@ void b(CUBE *cube)
 void b_inv(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[0][0][0].face[3];
   sav2 = cube->cubelet[0][0][0].face[0];
   sav3 = cube->cubelet[0][0][0].face[4];
-	
+
   cube->cubelet[0][0][0].face[3] = cube->cubelet[2][0][0].face[3];
   cube->cubelet[0][0][0].face[0] = cube->cubelet[2][0][0].face[2];
   cube->cubelet[0][0][0].face[4] = cube->cubelet[2][0][0].face[0];
-	
+
   cube->cubelet[2][0][0].face[3] = cube->cubelet[2][0][2].face[3];
   cube->cubelet[2][0][0].face[2] = cube->cubelet[2][0][2].face[5];
   cube->cubelet[2][0][0].face[0] = cube->cubelet[2][0][2].face[2];
-	
+
   cube->cubelet[2][0][2].face[3] = cube->cubelet[0][0][2].face[3];
   cube->cubelet[2][0][2].face[5] = cube->cubelet[0][0][2].face[4];
   cube->cubelet[2][0][2].face[2] = cube->cubelet[0][0][2].face[5];
-	
+
   cube->cubelet[0][0][2].face[3] = sav1;
   cube->cubelet[0][0][2].face[4] = sav2;
   cube->cubelet[0][0][2].face[5] = sav3;
-	
+
   sav1 = cube->cubelet[1][0][0].face[3];
   sav2 = cube->cubelet[1][0][0].face[0];
-	
+
   cube->cubelet[1][0][0].face[3] = cube->cubelet[2][0][1].face[3];
   cube->cubelet[1][0][0].face[0] = cube->cubelet[2][0][1].face[2];
-	
+
   cube->cubelet[2][0][1].face[3] = cube->cubelet[1][0][2].face[3];
   cube->cubelet[2][0][1].face[2] = cube->cubelet[1][0][2].face[5];
-	
+
   cube->cubelet[1][0][2].face[3] = cube->cubelet[0][0][1].face[3];
   cube->cubelet[1][0][2].face[5] = cube->cubelet[0][0][1].face[4];
-	
+
   cube->cubelet[0][0][1].face[3] = sav1;
   cube->cubelet[0][0][1].face[4] = sav2;
 }
 
+void d_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->d_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->d_angle=0;
+  d(cube);
+}
 
 void d(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[2][0][0].face[2];
   sav2 = cube->cubelet[2][0][0].face[3];
   sav3 = cube->cubelet[2][0][0].face[0];
-	
+
   cube->cubelet[2][0][0].face[2] = cube->cubelet[2][0][2].face[2];
   cube->cubelet[2][0][0].face[3] = cube->cubelet[2][0][2].face[5];
   cube->cubelet[2][0][0].face[0] = cube->cubelet[2][0][2].face[3];
-	
+
   cube->cubelet[2][0][2].face[2] = cube->cubelet[2][2][2].face[2];
   cube->cubelet[2][0][2].face[5] = cube->cubelet[2][2][2].face[1];
   cube->cubelet[2][0][2].face[3] = cube->cubelet[2][2][2].face[5];
-	
+
   cube->cubelet[2][2][2].face[2] = cube->cubelet[2][2][0].face[2];
   cube->cubelet[2][2][2].face[1] = cube->cubelet[2][2][0].face[0];
   cube->cubelet[2][2][2].face[5] = cube->cubelet[2][2][0].face[1];
-	
+
   cube->cubelet[2][2][0].face[2] = sav1;
   cube->cubelet[2][2][0].face[0] = sav2;
   cube->cubelet[2][2][0].face[1] = sav3;
-	
+
   sav1 = cube->cubelet[2][0][1].face[2];
   sav2 = cube->cubelet[2][0][1].face[3];
-	
+
   cube->cubelet[2][0][1].face[2] = cube->cubelet[2][1][2].face[2];
   cube->cubelet[2][0][1].face[3] = cube->cubelet[2][1][2].face[5];
-	
+
   cube->cubelet[2][1][2].face[2] = cube->cubelet[2][2][1].face[2];
   cube->cubelet[2][1][2].face[5] = cube->cubelet[2][2][1].face[1];
-	
+
   cube->cubelet[2][2][1].face[2] = cube->cubelet[2][1][0].face[2];
   cube->cubelet[2][2][1].face[1] = cube->cubelet[2][1][0].face[0];
-	
+
   cube->cubelet[2][1][0].face[2] = sav1;
   cube->cubelet[2][1][0].face[0] = sav2;
 }
@@ -501,6 +512,17 @@ void d_inv(CUBE *cube)
 {
   d(cube);
   d(cube);
+  d(cube);
+}
+
+void d_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->d_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->d_angle=0;
   d(cube);
 }
 
@@ -516,39 +538,39 @@ void g(CUBE *cube)
 void g_inv(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
-	
+
   sav1 = cube->cubelet[0][0][0].face[4];
   sav2 = cube->cubelet[0][0][0].face[3];
   sav3 = cube->cubelet[0][0][0].face[0];
-	
+
   cube->cubelet[0][0][0].face[4] = cube->cubelet[0][0][2].face[4];
   cube->cubelet[0][0][0].face[3] = cube->cubelet[0][0][2].face[5];
   cube->cubelet[0][0][0].face[0] = cube->cubelet[0][0][2].face[3];
-	
+
   cube->cubelet[0][0][2].face[4] = cube->cubelet[0][2][2].face[4];
   cube->cubelet[0][0][2].face[5] = cube->cubelet[0][2][2].face[1];
   cube->cubelet[0][0][2].face[3] = cube->cubelet[0][2][2].face[5];
-	
+
   cube->cubelet[0][2][2].face[4] = cube->cubelet[0][2][0].face[4];
   cube->cubelet[0][2][2].face[1] = cube->cubelet[0][2][0].face[0];
   cube->cubelet[0][2][2].face[5] = cube->cubelet[0][2][0].face[1];
-	
+
   cube->cubelet[0][2][0].face[4] = sav1;
   cube->cubelet[0][2][0].face[0] = sav2;
   cube->cubelet[0][2][0].face[1] = sav3;
-	
+
   sav1 = cube->cubelet[0][0][1].face[4];
   sav2 = cube->cubelet[0][0][1].face[3];
-	
+
   cube->cubelet[0][0][1].face[4] = cube->cubelet[0][1][2].face[4];
   cube->cubelet[0][0][1].face[3] = cube->cubelet[0][1][2].face[5];
-	
+
   cube->cubelet[0][1][2].face[4] = cube->cubelet[0][2][1].face[4];
   cube->cubelet[0][1][2].face[5] = cube->cubelet[0][2][1].face[1];
-	
+
   cube->cubelet[0][2][1].face[4] = cube->cubelet[0][1][0].face[4];
   cube->cubelet[0][2][1].face[1] = cube->cubelet[0][1][0].face[0];
-	
+
   cube->cubelet[0][1][0].face[4] = sav1;
   cube->cubelet[0][1][0].face[0] = sav2;
 }
@@ -557,10 +579,10 @@ void g_inv(CUBE *cube)
 void r_xz(CUBE *cube)
 {
   COLOR sav1, sav2;
-	
+
   h(cube);
   b_inv(cube);
-	
+
   sav1 = cube->cubelet[1][1][0].face[0];
   cube->cubelet[1][1][0].face[0] = cube->cubelet[2][1][1].face[2];
   cube->cubelet[2][1][1].face[2] = cube->cubelet[1][1][2].face[5];
@@ -591,10 +613,10 @@ void r_xz_inv(CUBE *cube)
 void r_xy(CUBE *cube)
 {
   COLOR sav1, sav2;
-	
+
   a(cube);
   p_inv(cube);
-	
+
   sav1 = cube->cubelet[1][2][1].face[1];
   cube->cubelet[1][2][1].face[1] = cube->cubelet[0][1][1].face[4];
   cube->cubelet[0][1][1].face[4] = cube->cubelet[1][0][1].face[3];

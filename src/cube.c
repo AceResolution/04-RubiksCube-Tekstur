@@ -1,4 +1,4 @@
-/* cube.c : fonctions evoluees pour le cube (Scramble et Exec) 
+/* cube.c : fonctions evoluees pour le cube (Scramble et Exec)
  *          advanced cube functions (Scramble and Exec)
  *
  */
@@ -77,7 +77,7 @@ void Exec( CUBE *cube, char *command )
 {
   char buf[3];
   char *pc;
-  
+
   for( pc = command ; *pc != 0 ; pc++ ) {
     buf[0] = *pc;
     if((*(pc+1)=='\'')||(*(pc+1)=='-')||(*(pc+1)=='2')||(*(pc+1)=='ý')||
@@ -122,14 +122,14 @@ void Exec( CUBE *cube, char *command )
       switch(buf[1]) {
       case '-':
       case '\'':
-        d_inv(cube);
+        d_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        d(cube);
+        d_anim(cube);
       case 0:
-        d(cube);
+        d_anim(cube);
       }
       break;
     case 'g':

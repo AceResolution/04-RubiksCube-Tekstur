@@ -1,4 +1,4 @@
-/* _cube.h : structures pour gerer le cube en memoire 
+/* _cube.h : structures pour gerer le cube en memoire
  *           cube structures
  *
  */
@@ -48,6 +48,7 @@ struct CUBE
   CUBELET cubelet[3][3][3];
   double a_angle;
   double p_angle;
+  double d_angle;
 } typedef CUBE;
 
 
