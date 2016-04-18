@@ -37,7 +37,7 @@ void Scramble( CUBE *cube )
       a( cube );
       break;
     case 2:
-      a_inv( cube );
+      a_inv_anim( cube );
       break;
     case 3:
       p( cube );
@@ -94,14 +94,14 @@ void Exec( CUBE *cube, char *command )
       switch(buf[1]) {
       case '-':
       case '\'':
-        a_inv(cube);
+        a_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        a(cube);
+        a_anim(cube);
       case 0:
-        a(cube);
+        a_anim(cube);
       }
       break;
     case 'p':
