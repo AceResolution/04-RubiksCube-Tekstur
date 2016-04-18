@@ -250,8 +250,24 @@ void reshape(int width, int height)
 void GestionClavier(unsigned char key, int x, int y)
 {
   switch(key) {
-  case 'a': a(pcube); return;
-  case 'A': a_inv(pcube); return;
+  case 'a': a_anim(pcube); return;
+  case 'A': a_inv_anim(pcube); return;
+  case 'p': p_anim(pcube); return;
+  case 'P': p_inv_anim(pcube); return;
+  case 'h': h_anim(pcube); return;
+  case 'H': h_inv_anim(pcube); return;
+  case 'b': b_anim(pcube); return;
+  case 'B': b_inv_anim(pcube); return;
+  case 'd': d_anim(pcube); return;
+  case 'D': d_inv_anim(pcube); return;
+  case 'g': g_anim(pcube); return;
+  case 'G': g_inv_anim(pcube); return;
+  case 'z': r_xy_anim(pcube); return;
+  case 'Z': r_xy_inv_anim(pcube); return;
+  case 'x': r_xz_anim(pcube); return;
+  case 'X': r_xz_inv_anim(pcube); return;
+  case 'c': r_yz_anim(pcube); return;
+  case 'C': r_yz_inv_anim(pcube); return;
   case '2':
     rx--;
     return;
