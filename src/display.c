@@ -172,17 +172,25 @@ void draw(void)
 
   glTranslated(0,2.5,0);
 
-  rotateAroundAxisd(2.5,-2.5,0,
+  rotateAroundAxisd(2.5,2.5,0,
 		-pcube->p_angle,0,0,1);
+  rotateAroundAxisd(2.5,0,2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[0][2][2]));
-  rotateAroundAxisd(2.5,-2.5,0,
+  rotateAroundAxisd(2.5,0,2.5,
+		pcube->h_angle,0,1,0);
+  rotateAroundAxisd(2.5,2.5,0,
 		pcube->p_angle,0,0,1);
 
   glTranslated(2.5,0,0);
 
   rotateAroundAxisd(0,-2.5,0,
 		-pcube->p_angle,0,0,1);
+  rotateAroundAxisd(0,0,2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[1][2][2]));
+  rotateAroundAxisd(0,0,2.5,
+		pcube->h_angle,0,1,0);
   rotateAroundAxisd(0,-2.5,0,
 		pcube->p_angle,0,0,1);
 
@@ -190,16 +198,32 @@ void draw(void)
 
   rotateAroundAxisd(-2.5,-2.5,0,
 		-pcube->p_angle,0,0,1);
+  rotateAroundAxisd(-2.5,0,2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[2][2][2]));
+  rotateAroundAxisd(-2.5,0,2.5,
+		pcube->h_angle,0,1,0);
   rotateAroundAxisd(-2.5,-2.5,0,
 		pcube->p_angle,0,0,1);
 
   glTranslated(0,0,2.5);
+  rotateAroundAxisd(-2.5,0,0,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[2][2][1]));
+  rotateAroundAxisd(-2.5,0,0,
+		pcube->h_angle,0,1,0);
   glTranslated(-2.5,0,0);
+  rotateAroundAxisd(0,0,0,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[1][2][1]));
+  rotateAroundAxisd(0,0,0,
+		pcube->h_angle,0,1,0);
   glTranslated(-2.5,0,0);
+  rotateAroundAxisd(2.5,0,0,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[0][2][1]));
+  rotateAroundAxisd(2.5,0,0,
+		pcube->h_angle,0,1,0);
   glTranslated(0,-2.5,0);
   drawcubelet(&(pcube->cubelet[0][1][1]));
   glTranslated(2.5,0,0);
@@ -258,21 +282,33 @@ void draw(void)
   glTranslated(0,2.5,0);
   rotateAroundAxisd(2.5,-2.5,0,
 		-pcube->a_angle,0,0,1);
+  rotateAroundAxisd(2.5,0,-2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[0][2][0]));
+  rotateAroundAxisd(2.5,0,-2.5,
+		pcube->h_angle,0,1,0);
   rotateAroundAxisd(2.5,-2.5,0,
 		pcube->a_angle,0,0,1);
   glTranslated(2.5,0,0);
 
   rotateAroundAxisd(0,-2.5,0,
 		-pcube->a_angle,0,0,1);
+  rotateAroundAxisd(0,0,-2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[1][2][0]));
+  rotateAroundAxisd(0,0,-2.5,
+		pcube->h_angle,0,1,0);
   rotateAroundAxisd(0,-2.5,0,
 		pcube->a_angle,0,0,1);
   glTranslated(2.5,0,0);
 
   rotateAroundAxisd(-2.5,-2.5,0,
 		-pcube->a_angle,0,0,1);
+  rotateAroundAxisd(-2.5,0,-2.5,
+		-pcube->h_angle,0,1,0);
   drawcubelet(&(pcube->cubelet[2][2][0]));
+  rotateAroundAxisd(-2.5,0,-2.5,
+		pcube->h_angle,0,1,0);
   rotateAroundAxisd(-2.5,-2.5,0,
 		pcube->a_angle,0,0,1);
   glutSwapBuffers();
