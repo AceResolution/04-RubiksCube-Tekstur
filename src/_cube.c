@@ -19,7 +19,7 @@
 \* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "_cube.h"
-
+#include <unistd.h>
 
 void Reset( CUBE *cube )
 {
@@ -211,8 +211,22 @@ void Reset( CUBE *cube )
   cube->cubelet[2][2][2].face[3] = N;
   cube->cubelet[2][2][2].face[4] = N;
   cube->cubelet[2][2][2].face[5] = Y;
+
+  cube->a_angle = 0;
 }
 
+#define anim_delay 10000
+
+void a_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->a_angle+=1;
+    usleep(anim_delay);
+  }
+  cube->a_angle=0;
+  a(cube);
+}
 
 void a(CUBE *cube)
 {
@@ -254,6 +268,16 @@ void a(CUBE *cube)
   cube->cubelet[0][1][0].face[4] = sav2;
 }
 
+void a_inv_anim(CUBE * cube)
+{
+  int i;
+  for (i = 0; i < 90; i++){
+    cube->a_angle-=1;
+    usleep(anim_delay);
+  }
+  cube->a_angle=0;
+  a_inv(cube);
+}
 
 void a_inv(CUBE *cube)
 {

@@ -46,6 +46,8 @@ struct CUBELET
 struct CUBE
 {
   CUBELET cubelet[3][3][3];
+  double a_angle;
+  double p_angle;
 } typedef CUBE;
 
 
@@ -53,9 +55,13 @@ struct CUBE
 /** Functions **/
 
 void Reset( CUBE *cube );
+void a_anim (CUBE *cube);
 void a( CUBE *cube );
+void a_inv_anim (CUBE *cube);
 void a_inv( CUBE *cube );
+void p_anim( CUBE *cube );
 void p( CUBE *cube );
+void p_inv_anim( CUBE *cube );
 void p_inv( CUBE *cube );
 void h( CUBE *cube );
 void h_inv( CUBE *cube );
