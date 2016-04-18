@@ -1,22 +1,33 @@
-# INCLUDE = -I/usr/include/
-# LIBDIR  = -L/usr/X11R6/LIBDIR
+all: bin bin/rbs
 
-COMPILERFLAGS = -Wall
-CC = g++
-CFLAGS = $(COMPILERFLAGS) $(INCLUDE)
-LIBRARIES = -lX11 -lXi -lXmu -lglut -lGL -lGLU -lm
-
-all: bin 03-01-RubiksCube clean
-
-# Initialise bin folder
 bin:
-	mkdir -p bin
+	mkdir -p bin	
 
-03-01-RubiksCube.o:
-	$(CC) $(CFLAGS) -c src/03-01-RubiksCube.cpp $(LIBRARIES)
+bin/rbs: _cube.o algorithmes.o cube.o display.o interpretor.o main.o tests.o
+	gcc -o bin/rbs _cube.o algorithmes.o cube.o display.o interpretor.o main.o tests.o -lGL -lXi -lGLU -lXt -lpthread -lglut -lX11
 
-03-01-RubiksCube: 03-01-RubiksCube.o
-	$(CC) $(CFLAGS) -o bin/03-01-RubiksCube.lexec 03-01-RubiksCube.o $(LIBRARIES)
+_cube.o: src/_cube.c
+	gcc -ggdb -c src/_cube.c
+
+algorithmes.o: src/algorithmes.c
+	gcc -ggdb -c src/algorithmes.c
+
+cube.o: src/cube.c
+	gcc -ggdb -c src/cube.c
+
+display.o: src/display.c
+	gcc -ggdb -c src/display.c
+
+interpretor.o: src/interpretor.c
+	gcc -ggdb -c src/interpretor.c
+
+main.o: src/main.c
+	gcc -ggdb -c src/main.c
+
+tests.o: src/tests.c
+	gcc -ggdb -c src/tests.c
 
 clean:
-	find . -type f -name '*.o' -delete
+	rm -f *.o
+
+
