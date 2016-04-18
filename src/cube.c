@@ -108,14 +108,14 @@ void Exec( CUBE *cube, char *command )
       switch(buf[1]) {
       case '-':
       case '\'':
-        p_inv(cube);
+        p_inv_anim(cube);
         break;
       case '2':
       case 'ý'://²
       case '²':
-        p(cube);
+        p_anim(cube);
       case 0:
-        p(cube);
+        p_anim(cube);
       }
       break;
     case 'd':
