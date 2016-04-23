@@ -316,7 +316,7 @@ void p_inv_anim(CUBE * cube)
     usleep(anim_delay);
   }
   cube->p_angle=0;
-  p(cube);
+  p_inv(cube);
 }
 
 void p_inv(CUBE *cube)
@@ -495,7 +495,7 @@ void b_inv_anim(CUBE * cube)
     usleep(anim_delay);
   }
   cube->b_angle=0;
-  b(cube);
+  b_inv(cube);
 }
 
 void d_anim(CUBE * cube)
@@ -565,7 +565,7 @@ void d_inv_anim(CUBE * cube)
     usleep(anim_delay);
   }
   cube->d_angle=0;
-  d(cube);
+  d_inv(cube);
 }
 
 
@@ -636,7 +636,7 @@ void g_inv_anim(CUBE * cube)
     usleep(anim_delay);
   }
   cube->g_angle=0;
-  g(cube);
+  g_inv(cube);
 }
 
 
