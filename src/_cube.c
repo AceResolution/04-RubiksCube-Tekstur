@@ -218,7 +218,7 @@ void Reset( CUBE *cube )
   cube->d_angle = 0;
 }
 
-#define anim_delay 10000
+#define anim_delay 3000
 
 void a_anim(CUBE * cube)
 {
