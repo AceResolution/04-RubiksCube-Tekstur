@@ -502,7 +502,7 @@ void d_anim(CUBE * cube)
 {
   int i;
   for (i = 0; i < 90; i++){
-    cube->d_angle-=1;
+    cube->d_angle+=1;
     usleep(anim_delay);
   }
   cube->d_angle=0;
@@ -561,7 +561,7 @@ void d_inv_anim(CUBE * cube)
 {
   int i;
   for (i = 0; i < 90; i++){
-    cube->d_angle+=1;
+    cube->d_angle-=1;
     usleep(anim_delay);
   }
   cube->d_angle=0;
