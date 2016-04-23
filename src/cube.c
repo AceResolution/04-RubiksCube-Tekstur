@@ -34,40 +34,40 @@ void Scramble( CUBE *cube )
     n = rand() / RND_SCRAMBLE;
     switch( n ) {
     case 1:
-      a( cube );
+      a_anim( cube );
       break;
     case 2:
       a_inv_anim( cube );
       break;
     case 3:
-      p( cube );
+      p_anim( cube );
       break;
     case 4:
-      p_inv( cube );
+      p_inv_anim( cube );
       break;
     case 5:
-      g( cube );
+      g_anim( cube );
       break;
     case 6:
-      g_inv( cube );
+      g_inv_anim( cube );
       break;
     case 7:
-      d( cube );
+      d_anim( cube );
       break;
     case 8:
-      d_inv( cube );
+      d_inv_anim( cube );
       break;
     case 9:
-      b( cube );
+      b_anim( cube );
       break;
     case 10:
-      b_inv( cube );
+      b_inv_anim( cube );
       break;
     case 11:
-      h( cube );
+      h_anim( cube );
       break;
     default:
-      h_inv( cube );
+      h_inv_anim( cube );
     }
   }
 }
