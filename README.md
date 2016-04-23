@@ -1,2 +1,2 @@
-# 03-RubiksCube
-Rubik's cube simulator.
+# 04-RubiksCube-Tekstur
+Rubik's cube simulator with Texture.
