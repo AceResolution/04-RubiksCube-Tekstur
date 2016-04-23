@@ -370,18 +370,6 @@ void h_anim(CUBE * cube)
   h(cube);
 }
 
-void h_anim(CUBE * cube)
-{
-  int i;
-  for (i = 0; i < 90; i++){
-    cube->h_angle+=1;
-    usleep(anim_delay);
-  }
-  cube->h_angle=0;
-  h(cube);
-}
-
-
 void h(CUBE *cube)
 {
   COLOR sav1, sav2, sav3;
@@ -427,7 +415,7 @@ void h_inv_anim(CUBE * cube)
 {
   int i;
   for (i = 0; i < 90; i++){
-    cube->h_angle-=1;
+    cube->h_angle+=1;
     usleep(anim_delay);
   }
   cube->h_angle=0;
@@ -438,17 +426,6 @@ void h_inv(CUBE *cube)
 {
   h(cube);
   h(cube);
-  h(cube);
-}
-
-void h_inv_anim(CUBE * cube)
-{
-  int i;
-  for (i = 0; i < 90; i++){
-    cube->h_angle+=1;
-    usleep(anim_delay);
-  }
-  cube->h_angle=0;
   h(cube);
 }
 
