@@ -59,13 +59,21 @@ struct CUBE
 /** Functions **/
 
 void Reset( CUBE *cube );
-void a_anim (CUBE *cube);
-void a( CUBE *cube );
-void a_inv_anim (CUBE *cube);
-void a_inv( CUBE *cube );
+void a_anim( CUBE *cube );
+void a_inv_anim( CUBE *cube );
 void p_anim( CUBE *cube );
-void p( CUBE *cube );
 void p_inv_anim( CUBE *cube );
+void h_anim( CUBE *cube );
+void h_inv_anim( CUBE *cube );
+void b_anim( CUBE *cube );
+void b_inv_anim( CUBE *cube );
+void d_anim( CUBE *cube );
+void d_inv_anim( CUBE *cube );
+void g_anim( CUBE *cube );
+void g_inv_anim( CUBE *cube );
+void a( CUBE *cube );
+void a_inv( CUBE *cube );
+void p( CUBE *cube );
 void p_inv( CUBE *cube );
 void h( CUBE *cube );
 void h_inv( CUBE *cube );

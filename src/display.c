@@ -23,6 +23,8 @@
 #include <GL/glut.h>
 #include "_cube.h"
 
+#include "rotate_animation_threads.h"
+
 
 CUBE *pcube;
 int Window;
@@ -446,18 +448,18 @@ void reshape(int width, int height)
 void GestionClavier(unsigned char key, int x, int y)
 {
   switch(key) {
-  case 'a': a(pcube); return;
-  case 'A': a_inv(pcube); return;
-  case 'p': p(pcube); return;
-  case 'P': p_inv(pcube); return;
-  case 'h': h(pcube); return;
-  case 'H': h_inv(pcube); return;
-  case 'b': b(pcube); return;
-  case 'B': b_inv(pcube); return;
-  case 'd': d(pcube); return;
-  case 'D': d_inv(pcube); return;
-  case 'g': g(pcube); return;
-  case 'G': g_inv(pcube); return;
+  case 'a': run_anim_thread(a_anim,pcube); return;
+  case 'A': run_anim_thread(a_inv_anim,pcube); return;
+  case 'p': run_anim_thread(p_anim,pcube); return;
+  case 'P': run_anim_thread(p_inv_anim,pcube); return;
+  case 'h': run_anim_thread(h_anim,pcube); return;
+  case 'H': run_anim_thread(h_inv_anim,pcube); return;
+  case 'b': run_anim_thread(b_anim,pcube); return;
+  case 'B': run_anim_thread(b_inv_anim,pcube); return;
+  case 'd': run_anim_thread(d_anim,pcube); return;
+  case 'D': run_anim_thread(d_inv_anim,pcube); return;
+  case 'g': run_anim_thread(g_anim,pcube); return;
+  case 'G': run_anim_thread(g_inv_anim,pcube); return;
   case 'z': r_xy(pcube); return;
   case 'Z': r_xy_inv(pcube); return;
   case 'x': r_xz(pcube); return;
