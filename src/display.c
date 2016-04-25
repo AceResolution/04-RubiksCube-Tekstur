@@ -158,7 +158,7 @@ void drawcubelet( CUBELET *cubelet )
   glTexCoord2f(1,1);glVertex3i(-1,1,1);
   glTexCoord2f(0,1);glVertex3i(-1,-1,1);
   glTexCoord2f(0,0);glVertex3i(-1,-1,-1);
-  glTexCoord2f(1,1);glVertex3i(-1,1,-1);
+  glTexCoord2f(1,0);glVertex3i(-1,1,-1);
   glEnd();
   //face 5
   setColor(cubelet->face[5]);
