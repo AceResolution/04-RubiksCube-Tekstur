@@ -36,12 +36,67 @@ void display( CUBE *cube )
   pcube = cube;
 }
 
+/*	Create checkerboard texture	*/
+#define	checkImageWidth 64
+#define	checkImageHeight 64
+static GLubyte checkImage[checkImageHeight][checkImageWidth][4];
+
+#ifdef GL_VERSION_1_1
+static GLuint texName;
+#endif
+
+void makeCheckImage(void)
+{
+   int i, j, c;
+    
+   for (i = 0; i < checkImageHeight; i++) {
+      for (j = 0; j < checkImageWidth; j++) {
+         c = ((((i&0x8)==0)^((j&0x8))==0))*255;
+         checkImage[i][j][0] = (GLubyte) c;
+         checkImage[i][j][1] = (GLubyte) c;
+         checkImage[i][j][2] = (GLubyte) c;
+         checkImage[i][j][3] = (GLubyte) 255;
+      }
+   }
+}
+
+void initCheckTexture(){
+   glClearColor (0.0, 0.0, 0.0, 0.0);
+   glShadeModel(GL_FLAT);
+   glEnable(GL_DEPTH_TEST);
+
+   makeCheckImage();
+   glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+#ifdef GL_VERSION_1_1
+   glGenTextures(1, &texName);
+   glBindTexture(GL_TEXTURE_2D, texName);
+#endif
+
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+#ifdef GL_VERSION_1_1
+   glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, checkImageWidth, checkImageHeight, 
+                0, GL_RGBA, GL_UNSIGNED_BYTE, checkImage);
+#else
+   glTexImage2D(GL_TEXTURE_2D, 0, 4, checkImageWidth, checkImageHeight, 
+                0, GL_RGBA, GL_UNSIGNED_BYTE, checkImage);
+#endif
+}
 
 void setColor( COLOR color )
 {
+  glDisable(GL_TEXTURE_2D);
   switch(color) {
   case W:	//I,blanc,white
-    glColor3d(1,1,1);
+   glEnable(GL_TEXTURE_2D);
+   glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+#ifdef GL_VERSION_1_1
+   glBindTexture(GL_TEXTURE_2D, texName);
+#endif
+   // glColor3d(1,1,1);
     break;
   case R:	//R,rouge,red
     glColor3d(1,0,0);
@@ -65,43 +120,53 @@ void setColor( COLOR color )
 
 void drawcubelet( CUBELET *cubelet )
 {
-  glBegin(GL_QUADS);
   //face 0
   setColor(cubelet->face[0]);
-  glVertex3i(1,1,1);
-  glVertex3i(1,-1,1);
-  glVertex3i(-1,-1,1);
-  glVertex3i(-1,1,1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(1,1);glVertex3i(1,1,1);
+  glTexCoord2f(1,0);glVertex3i(1,-1,1);
+  glTexCoord2f(0,0);glVertex3i(-1,-1,1);
+  glTexCoord2f(0,1);glVertex3i(-1,1,1);
+  glEnd();
   //face 1
   setColor(cubelet->face[1]);
-  glVertex3i(-1,1,-1);
-  glVertex3i(-1,1,1);
-  glVertex3i(1,1,1);
-  glVertex3i(1,1,-1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(0,0);glVertex3i(-1,1,-1);
+  glTexCoord2f(0,1);glVertex3i(-1,1,1);
+  glTexCoord2f(1,1);glVertex3i(1,1,1);
+  glTexCoord2f(1,0);glVertex3i(1,1,-1);
+  glEnd();
   //face 2
   setColor(cubelet->face[2]);
-  glVertex3i(1,1,1);
-  glVertex3i(1,-1,1);
-  glVertex3i(1,-1,-1);
-  glVertex3i(1,1,-1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(1,1);glVertex3i(1,1,1);
+  glTexCoord2f(0,1);glVertex3i(1,-1,1);
+  glTexCoord2f(0,0);glVertex3i(1,-1,-1);
+  glTexCoord2f(1,0);glVertex3i(1,1,-1);
+  glEnd();
   //face 3
   setColor(cubelet->face[3]);
-  glVertex3i(-1,-1,-1);
-  glVertex3i(-1,-1,1);
-  glVertex3i(1,-1,1);
-  glVertex3i(1,-1,-1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(0,0);glVertex3i(-1,-1,-1);
+  glTexCoord2f(0,1);glVertex3i(-1,-1,1);
+  glTexCoord2f(1,1);glVertex3i(1,-1,1);
+  glTexCoord2f(1,0);glVertex3i(1,-1,-1);
+  glEnd();
   //face 4
   setColor(cubelet->face[4]);
-  glVertex3i(-1,1,1);
-  glVertex3i(-1,-1,1);
-  glVertex3i(-1,-1,-1);
-  glVertex3i(-1,1,-1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(1,1);glVertex3i(-1,1,1);
+  glTexCoord2f(0,1);glVertex3i(-1,-1,1);
+  glTexCoord2f(0,0);glVertex3i(-1,-1,-1);
+  glTexCoord2f(1,1);glVertex3i(-1,1,-1);
+  glEnd();
   //face 5
   setColor(cubelet->face[5]);
-  glVertex3i(1,1,-1);
-  glVertex3i(1,-1,-1);
-  glVertex3i(-1,-1,-1);
-  glVertex3i(-1,1,-1);
+  glBegin(GL_QUADS);
+  glTexCoord2f(1,1);glVertex3i(1,1,-1);
+  glTexCoord2f(1,0);glVertex3i(1,-1,-1);
+  glTexCoord2f(0,0);glVertex3i(-1,-1,-1);
+  glTexCoord2f(0,1);glVertex3i(-1,1,-1);
   glEnd();
 }
 
@@ -510,6 +575,7 @@ void initdisplay( int argc, char *argv[] )
   Window = glutCreateWindow("Rubik's Cube");
 
   InitGL();
+  initCheckTexture();
   glutReshapeFunc(reshape);
   glutDisplayFunc(draw);
   glutKeyboardFunc(GestionClavier);
