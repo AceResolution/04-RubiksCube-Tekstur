@@ -37,8 +37,8 @@ void display( CUBE *cube )
 }
 
 /*	Create checkerboard texture	*/
-#define	checkImageWidth 64
-#define	checkImageHeight 64
+#define	checkImageWidth 72
+#define	checkImageHeight 72
 static GLubyte checkImage[checkImageHeight][checkImageWidth][4];
 
 #ifdef GL_VERSION_1_1
