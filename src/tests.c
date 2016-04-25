@@ -1,5 +1,14 @@
 /* tests.c : tests pour voir la couleur d'une certaine face
  *           test functions
+
+AceResolution's Rubik's Cube Simulator
+Muhammad Nizami
+Erick Chandra
+Fathul Asrar Alfansuri
+
+- dibuat untuk kepentingan pendidikan - 
+
+Built on top of Rubik's Cube Simulator by AnTiKoNs
  *
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\

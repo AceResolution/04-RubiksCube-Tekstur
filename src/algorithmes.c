@@ -1,5 +1,16 @@
 /* algorithmes.c : algorithme pour refaire le cube (incomplet)
  *                 an algorithme which resolves the cube
+
+
+AceResolution's Rubik's Cube Simulator
+Muhammad Nizami
+Erick Chandra
+Fathul Asrar Alfansuri
+
+- dibuat untuk kepentingan pendidikan - 
+
+Built on top of Rubik's Cube Simulator by AnTiKoNs
+
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
  * Rubik's Cube Simulator !                 Copyright (C) 2002, AnTiKoNs *

@@ -1,6 +1,16 @@
 /* _cube.c : Les fonctions de base du cube (Reset,a,p,g,d,h,b et inverses)
  *           Base cube functions
-	modif oleh AceOneWorks (Nizam, EC, Elfansoer)
+
+
+AceResolution's Rubik's Cube Simulator
+Muhammad Nizami
+Erick Chandra
+Fathul Asrar Alfansuri
+
+- dibuat untuk kepentingan pendidikan - 
+
+Built on top of Rubik's Cube Simulator by AnTiKoNs
+
  */
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\
  * Rubik's Cube Simulator !                 Copyright (C) 2002, AnTiKoNs *

@@ -1,5 +1,19 @@
 // AceOneWorks (Nizami - EC - Fathul)
 
+/*
+
+
+AceResolution's Rubik's Cube Simulator
+Muhammad Nizami
+Erick Chandra
+Fathul Asrar Alfansuri
+
+- dibuat untuk kepentingan pendidikan - 
+
+Built on top of Rubik's Cube Simulator by AnTiKoNs
+
+*/
+
 #ifndef rotate_animation_thread_h
 #define rotate_animation_thread_h
 
