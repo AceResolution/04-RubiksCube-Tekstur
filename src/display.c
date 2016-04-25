@@ -46,6 +46,7 @@ void display( CUBE *cube )
   pcube = cube;
 }
 
+/*	Tekstur diambil dari https://www.opengl.org/archives/resources/code/samples/redbook/checker.c */
 /*	Create checkerboard texture	*/
 #define	checkImageWidth 72
 #define	checkImageHeight 72
